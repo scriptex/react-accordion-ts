@@ -1,4 +1,5 @@
-[![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/react-accordion/README.md)](https://github.com/scriptex/react-accordion/)
+[![Build Status](https://travis-ci.org/scriptex/react-accordion-ts.svg?branch=master)](https://travis-ci.org/scriptex/react-accordion-ts)
+[![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/react-accordion-ts/README.md)](https://github.com/scriptex/react-accordion-ts/)
 
 # React Accordion
 
