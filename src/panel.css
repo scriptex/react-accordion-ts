@@ -1,0 +1,23 @@
+.panel__head {
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.panel__body {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    transition: height 0.35s ease-in-out;
+}
+
+.panel__content {
+    opacity: 0;
+    transition: opacity 0.35s ease-in-out;
+}
+
+.panel[aria-expanded='true'] .panel__content {
+    opacity: 1;
+}
