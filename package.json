@@ -1,0 +1,49 @@
+{
+  "name": "react-ion",
+  "version": "0.0.1",
+  "description": "A ReactJS Accordion component",
+  "main": "dist/index.js",
+  "style": "src/panel.css",
+  "scripts": {
+    "clear": "rm -rf dist",
+    "start": "tsc -w",
+    "build": "yarn clear && tsc --build tsconfig.json",
+    "test": "jest",
+    "lint": "tslint -c tslint.json --project tsconfig.json",
+    "prepare": "yarn lint && yarn build && yarn test"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "peerDependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.3",
+    "@types/react": "^16.4.16",
+    "@types/react-dom": "^16.0.8",
+    "@types/react-test-renderer": "^16.0.3",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "jest": "^23.6.0",
+    "react-test-renderer": "^16.5.2",
+    "ts-jest": "^22.4.2",
+    "tslint": "^5.11.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.1.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
+  }
+}
