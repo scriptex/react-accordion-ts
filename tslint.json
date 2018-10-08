@@ -28,8 +28,8 @@
     ],
     "indent": [
       true,
-      "spaces",
-      2
+      "tab",
+      1
     ],
     "interface-name": [
       true,

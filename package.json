@@ -1,5 +1,5 @@
 {
-  "name": "react-ion",
+  "name": "react-accordion-ts",
   "version": "0.0.1",
   "description": "A ReactJS Accordion component",
   "main": "dist/index.js",

@@ -8,7 +8,7 @@ An accordion widget for React applications written in Typescript.
 
 ```javascript
 import React from 'react';
-import Accordion from 'react-ion';
+import Accordion from 'react-accordion-ts';
 
 const news = [
 	{
