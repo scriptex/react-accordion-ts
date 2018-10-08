@@ -4,7 +4,7 @@ import Panel from './panel';
 interface AccordionItem {
 	date: string;
 	title: string;
-	content: string | Array<string>;
+	content: Array<string>;
 }
 
 interface AccordionState {
@@ -31,7 +31,7 @@ class Accordion extends React.Component<Props> {
 		}));
 	}
 
-	public renderBody = (body: string | Array<string>) => {
+	public renderBody = (body: Array<string>) => {
 		if (typeof body === 'string') {
 			return <p>{body}</p>;
 		} else if (Array.isArray(body)) {
