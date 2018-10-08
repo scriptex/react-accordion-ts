@@ -12,6 +12,18 @@
     "lint": "tslint -c tslint.json --project tsconfig.json",
     "prepare": "yarn lint && yarn build && yarn test"
   },
+  "keywords": [
+    "React",
+    "Accordion",
+    "Typescript",
+    "Widget"
+  ],
+  "author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
+  "repository": "https://github.com/scriptex/react-ion",
+  "bugs": {
+    "url": "https://github.com/scriptex/react-ion/issues",
+    "email": "scriptex.bg@gmail.com"
+  },
   "license": "MIT",
   "dependencies": {
     "react": "^16.5.2",
