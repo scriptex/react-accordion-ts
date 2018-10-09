@@ -20,7 +20,8 @@ var Panel = (function (_super) {
     function Panel(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
-            height: 0
+            height: 0,
+            isActive: false
         };
         return _this;
     }
@@ -34,13 +35,18 @@ var Panel = (function (_super) {
         }, this.props.duration || 300);
     };
     Panel.prototype.render = function () {
-        var _a = this.props, title = _a.title, children = _a.children, activeTab = _a.activeTab, index = _a.index, activatePanel = _a.activatePanel;
-        var isActive = activeTab === index;
+        var _this = this;
+        var _a = this.props, index = _a.index, title = _a.title, multiple = _a.multiple, children = _a.children, activeTab = _a.activeTab, activatePanel = _a.activatePanel;
+        var isActive = multiple ? this.state.isActive : activeTab === index;
         var innerStyle = {
             height: (isActive ? this.state.height : 0) + "px"
         };
         return (React.createElement("div", { className: "panel", role: "tabpanel", "aria-expanded": isActive },
-            React.createElement("button", { role: "tab", className: "panel__head", onClick: function (_) { return activatePanel(index); } }, title),
+            React.createElement("button", { role: "tab", className: "panel__head", onClick: function (_) {
+                    multiple
+                        ? _this.setState({ isActive: !_this.state.isActive })
+                        : activatePanel(index);
+                } }, title),
             React.createElement("div", { style: innerStyle, className: "panel__body", "aria-hidden": !isActive },
                 React.createElement("div", { className: "panel__content" }, children))));
     };

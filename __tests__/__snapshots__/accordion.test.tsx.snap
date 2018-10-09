@@ -1,123 +1,121 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Accordion should render no items 1`] = `
-<div
-  className="accordion"
-  role="tablist"
->
-  
-</div>
-`;
+exports[`Accordion should render no items 1`] = `""`;
 
 exports[`Accordion should render properly 1`] = `
-<div
-  className="accordion"
-  role="tablist"
->
+Array [
   <div
-    aria-expanded={false}
-    className="panel"
-    role="tabpanel"
+    className="accordion"
+    role="tablist"
   >
-    <button
-      className="panel__head"
-      onClick={[Function]}
-      role="tab"
-    >
-      <h2>
-        12-10-2018 - Awesome title
-      </h2>
-    </button>
     <div
-      aria-hidden={true}
-      className="panel__body"
-      style={
-        Object {
-          "height": "0px",
-        }
-      }
+      aria-expanded={false}
+      className="panel"
+      role="tabpanel"
     >
-      <div
-        className="panel__content"
+      <button
+        className="panel__head"
+        onClick={[Function]}
+        role="tab"
       >
-        <p>
-          Fantastic content
-        </p>
+        <h2>
+          12-10-2018 - Awesome title
+        </h2>
+      </button>
+      <div
+        aria-hidden={true}
+        className="panel__body"
+        style={
+          Object {
+            "height": "0px",
+          }
+        }
+      >
+        <div
+          className="panel__content"
+        >
+          <p>
+            Fantastic content
+          </p>
+        </div>
       </div>
     </div>
-  </div>
+  </div>,
   <div
-    aria-expanded={false}
-    className="panel"
-    role="tabpanel"
+    className="accordion"
+    role="tablist"
   >
-    <button
-      className="panel__head"
-      onClick={[Function]}
-      role="tab"
-    >
-      <h2>
-        13-10-2018 - Awesome title
-      </h2>
-    </button>
     <div
-      aria-hidden={true}
-      className="panel__body"
-      style={
-        Object {
-          "height": "0px",
-        }
-      }
+      aria-expanded={false}
+      className="panel"
+      role="tabpanel"
     >
-      <div
-        className="panel__content"
+      <button
+        className="panel__head"
+        onClick={[Function]}
+        role="tab"
       >
-        <p>
-          Fantastic content
-        </p>
+        <h2>
+          13-10-2018 - Awesome title
+        </h2>
+      </button>
+      <div
+        aria-hidden={true}
+        className="panel__body"
+        style={
+          Object {
+            "height": "0px",
+          }
+        }
+      >
+        <div
+          className="panel__content"
+        >
+          <p>
+            Fantastic content
+          </p>
+        </div>
       </div>
     </div>
-  </div>
+  </div>,
   <div
-    aria-expanded={false}
-    className="panel"
-    role="tabpanel"
+    className="accordion"
+    role="tablist"
   >
-    <button
-      className="panel__head"
-      onClick={[Function]}
-      role="tab"
-    >
-      <h2>
-        13-10-2018 - Awesome title
-      </h2>
-    </button>
     <div
-      aria-hidden={true}
-      className="panel__body"
-      style={
-        Object {
-          "height": "0px",
-        }
-      }
+      aria-expanded={false}
+      className="panel"
+      role="tabpanel"
     >
-      <div
-        className="panel__content"
+      <button
+        className="panel__head"
+        onClick={[Function]}
+        role="tab"
       >
-        <p>
-          Fantastic content
-        </p>
+        <h2>
+          13-10-2018 - Awesome title
+        </h2>
+      </button>
+      <div
+        aria-hidden={true}
+        className="panel__body"
+        style={
+          Object {
+            "height": "0px",
+          }
+        }
+      >
+        <div
+          className="panel__content"
+        >
+          <p>
+            Fantastic content
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
 
-exports[`Accordion should render properly 2`] = `
-<div
-  className="accordion"
-  role="tablist"
->
-  
-</div>
-`;
+exports[`Accordion should render properly 2`] = `""`;
