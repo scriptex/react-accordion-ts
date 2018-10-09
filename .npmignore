@@ -30,3 +30,8 @@ webpack-mpa.svg
 
 # lock files
 yarn.lock
+
+# Config files
+renovate.json
+rollup.config.js
+webpack.config.js
