@@ -30,17 +30,26 @@ const news = [
 	}
 ];
 
-<Accordion items={news} duration={300}
+const items = news.map(({ date, title, content }) => ({
+	title: <h2>{date + ' - ' + title}</h2>,
+	content: <p>{content}</p>
+}));
+
+export const MyComponent = () => (
+	<Accordion items={news} duration={300} multiple={true} />
+);
 ```
 
 ## Props
 
 1. items: Array of objects with the following properties:
-	- date [Optional] - String
-	- title [Required] - String
-	- content [Required] - String or Array of strings
+
+   - title [Required] - React Node
+   - content [Required] - React Node
 
 2. Duration [Required] - Number (Duration of the toggling transition)
+
+3. Multiple [Required] - Boolean (If false, only one panel can be opened at any time)
 
 ## LICENSE
 
