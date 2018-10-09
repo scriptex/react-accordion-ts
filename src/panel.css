@@ -1,7 +1,8 @@
 .panel__head {
     padding: 0;
     border: 0;
-    cursor: pointer;
+	cursor: pointer;
+	background-color: transparent;
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;

@@ -5,6 +5,7 @@ interface Props {
 	index: number;
 	title: React.ReactNode;
 	duration: number;
+	multiple: boolean;
 	children?: React.ReactNode;
 	activeTab: number;
 	activatePanel(index: number): void;
@@ -12,6 +13,7 @@ interface Props {
 
 interface PanelState {
 	height: number;
+	isActive: boolean;
 }
 
 interface ExtendedElement extends Element {
@@ -20,7 +22,8 @@ interface ExtendedElement extends Element {
 
 class Panel extends React.Component<Props> {
 	public state: PanelState = {
-		height: 0
+		height: 0,
+		isActive: false
 	};
 
 	constructor(props: Props) {
@@ -38,8 +41,17 @@ class Panel extends React.Component<Props> {
 	}
 
 	public render(): React.ReactNode {
-		const { title, children, activeTab, index, activatePanel } = this.props;
-		const isActive = activeTab === index;
+		const {
+			index,
+			title,
+			multiple,
+			children,
+			activeTab,
+			activatePanel
+		} = this.props;
+
+		const isActive = multiple ? this.state.isActive : activeTab === index;
+
 		const innerStyle = {
 			height: `${isActive ? this.state.height : 0}px`
 		};
@@ -49,16 +61,16 @@ class Panel extends React.Component<Props> {
 				<button
 					role="tab"
 					className="panel__head"
-					onClick={_ => activatePanel(index)}
+					onClick={_ => {
+						multiple
+							? this.setState({ isActive: !this.state.isActive })
+							: activatePanel(index);
+					}}
 				>
 					{title}
 				</button>
 
-				<div
-					style={innerStyle}
-					className="panel__body"
-					aria-hidden={!isActive}
-				>
+				<div style={innerStyle} className="panel__body" aria-hidden={!isActive}>
 					<div className="panel__content">{children}</div>
 				</div>
 			</div>

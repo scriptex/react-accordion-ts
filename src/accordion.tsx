@@ -13,6 +13,7 @@ interface AccordionState {
 interface Props {
 	items: Array<AccordionItem>;
 	duration: number;
+	multiple: boolean;
 }
 
 class Accordion extends React.Component<Props> {
@@ -25,31 +26,34 @@ class Accordion extends React.Component<Props> {
 	}
 
 	public activatePanel = (index: number): void => {
-		this.setState((prev: AccordionState) => ({
-			activeTab: prev.activeTab === index ? -1 : index
-		}));
-	}
+		if (!this.props.multiple) {
+			this.setState((prev: AccordionState) => ({
+				activeTab: prev.activeTab === index ? -1 : index
+			}));
+		}
+	};
 
 	public render(): React.ReactNode {
 		const { activeTab } = this.state;
-		const { items, duration } = this.props;
+		const { items, duration, multiple } = this.props;
 
-		return (
-			<div className="accordion" role="tablist">
-				{Array.isArray(items) && items.length ? items.map(({ title, content }, index) => (
-					<Panel
-						key={index}
-						title={title}
-						index={index}
-						duration={duration}
-						activeTab={activeTab}
-						activatePanel={this.activatePanel}
-					>
-						{content}
-					</Panel>
-				)) : ''}
-			</div>
-		);
+		return Array.isArray(items) && items.length
+			? items.map(({ title, content }, index) => (
+					<div className="accordion" role="tablist">
+						<Panel
+							key={index}
+							title={title}
+							index={index}
+							duration={duration}
+							multiple={multiple}
+							activeTab={activeTab}
+							activatePanel={this.activatePanel}
+						>
+							{content}
+						</Panel>
+					</div>
+			  ))
+			: '';
 	}
 }
 
