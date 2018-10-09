@@ -31,7 +31,7 @@ class Accordion extends React.Component<Props> {
 				activeTab: prev.activeTab === index ? -1 : index
 			}));
 		}
-	};
+	}
 
 	public render(): React.ReactNode {
 		const { activeTab } = this.state;
@@ -39,20 +39,20 @@ class Accordion extends React.Component<Props> {
 
 		return Array.isArray(items) && items.length
 			? items.map(({ title, content }, index) => (
-					<div className="accordion" role="tablist">
-						<Panel
-							key={index}
-							title={title}
-							index={index}
-							duration={duration}
-							multiple={multiple}
-							activeTab={activeTab}
-							activatePanel={this.activatePanel}
-						>
-							{content}
-						</Panel>
-					</div>
-			  ))
+				<div className="accordion" role="tablist">
+					<Panel
+						key={index}
+						title={title}
+						index={index}
+						duration={duration}
+						multiple={multiple}
+						activeTab={activeTab}
+						activatePanel={this.activatePanel}
+					>
+						{content}
+					</Panel>
+				</div>
+			))
 			: '';
 	}
 }
