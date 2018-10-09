@@ -3,9 +3,9 @@ import { findDOMNode } from 'react-dom';
 
 interface Props {
 	index: number;
-	title: JSX.Element;
+	title: React.ReactNode;
 	duration: number;
-	children?: React.ReactChild;
+	children?: React.ReactNode;
 	activeTab: number;
 	activatePanel(index: number): void;
 }

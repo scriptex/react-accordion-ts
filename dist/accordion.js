@@ -27,33 +27,16 @@ var Accordion = (function (_super) {
                 activeTab: prev.activeTab === index ? -1 : index
             }); });
         };
-        _this.renderBody = function (body) {
-            if (typeof body === 'string') {
-                return React.createElement("p", null, body);
-            }
-            else if (Array.isArray(body)) {
-                return React.createElement("ul", null, body.map(function (item, i) { return React.createElement("li", { key: i }, item); }));
-            }
-            else {
-                throw new TypeError('The body is neither string nor array.');
-            }
-        };
         return _this;
     }
     Accordion.prototype.render = function () {
         var _this = this;
         var activeTab = this.state.activeTab;
         var _a = this.props, items = _a.items, duration = _a.duration;
-        return (React.createElement("div", { className: "accordion", role: "tablist" }, Array.isArray(items)
-            ? items.map(function (_a, index) {
-                var date = _a.date, title = _a.title, content = _a.content;
-                var header = date ? (React.createElement(React.Fragment, null,
-                    React.createElement("time", null, date),
-                    React.createElement("small", null, "-"),
-                    React.createElement("strong", null, title))) : (React.createElement("strong", null, title));
-                return (React.createElement(panel_1.default, { key: index, title: header, index: index, duration: duration, activeTab: activeTab, activatePanel: _this.activatePanel }, _this.renderBody(content)));
-            })
-            : ''));
+        return (React.createElement("div", { className: "accordion", role: "tablist" }, Array.isArray(items) && items.length ? items.map(function (_a, index) {
+            var title = _a.title, content = _a.content;
+            return (React.createElement(panel_1.default, { key: index, title: title, index: index, duration: duration, activeTab: activeTab, activatePanel: _this.activatePanel }, content));
+        }) : ''));
     };
     return Accordion;
 }(React.Component));
