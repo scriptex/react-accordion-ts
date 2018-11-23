@@ -16,7 +16,6 @@ node_modules/
 .Trashes
 ehthumbs.db
 Thumbs.db
-webpack-mpa.svg
 
 # EditorConfig
 .editorconfig
@@ -35,3 +34,8 @@ yarn.lock
 renovate.json
 rollup.config.js
 webpack.config.js
+
+# Prettier
+.prettierrc
+.prettierignore
+
