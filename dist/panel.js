@@ -5,7 +5,7 @@ var __extends = (this && this.__extends) || (function () {
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
             function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
-    }
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -29,8 +29,7 @@ var Panel = (function (_super) {
         var _this = this;
         setTimeout(function () {
             var el = react_dom_1.findDOMNode(_this);
-            var height = el.querySelector('.panel__body')
-                .scrollHeight;
+            var height = el.querySelector('.panel__body').scrollHeight;
             _this.setState({ height: height });
         }, this.props.duration || 300);
     };
@@ -43,9 +42,7 @@ var Panel = (function (_super) {
         };
         return (React.createElement("div", { className: "panel", role: "tabpanel", "aria-expanded": isActive },
             React.createElement("button", { role: "tab", className: "panel__head", onClick: function (_) {
-                    multiple
-                        ? _this.setState({ isActive: !_this.state.isActive })
-                        : activatePanel(index);
+                    multiple ? _this.setState({ isActive: !_this.state.isActive }) : activatePanel(index);
                 } }, title),
             React.createElement("div", { style: innerStyle, className: "panel__body", "aria-hidden": !isActive },
                 React.createElement("div", { className: "panel__content" }, children))));

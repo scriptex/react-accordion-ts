@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Accordion should render no items 1`] = `""`;
-
 exports[`Accordion should render properly 1`] = `
 Array [
   <div

@@ -33,22 +33,14 @@ class Panel extends React.Component<Props> {
 	public componentDidMount(): void {
 		setTimeout(() => {
 			const el = findDOMNode(this);
-			const height = (el as ExtendedElement).querySelector('.panel__body')
-				.scrollHeight;
+			const height = (el as ExtendedElement).querySelector('.panel__body').scrollHeight;
 
 			this.setState({ height });
 		}, this.props.duration || 300);
 	}
 
 	public render(): React.ReactNode {
-		const {
-			index,
-			title,
-			multiple,
-			children,
-			activeTab,
-			activatePanel
-		} = this.props;
+		const { index, title, multiple, children, activeTab, activatePanel } = this.props;
 
 		const isActive = multiple ? this.state.isActive : activeTab === index;
 
@@ -62,9 +54,7 @@ class Panel extends React.Component<Props> {
 					role="tab"
 					className="panel__head"
 					onClick={_ => {
-						multiple
-							? this.setState({ isActive: !this.state.isActive })
-							: activatePanel(index);
+						multiple ? this.setState({ isActive: !this.state.isActive }) : activatePanel(index);
 					}}
 				>
 					{title}

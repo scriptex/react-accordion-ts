@@ -1,59 +1,59 @@
 {
-  "name": "react-accordion-ts",
-  "version": "0.1.0",
-  "description": "A ReactJS Accordion component",
-  "main": "dist/index.js",
-  "style": "src/panel.css",
-  "scripts": {
-    "clear": "rm -rf dist",
-    "start": "tsc -w",
-    "build": "yarn clear && tsc --build tsconfig.json",
-    "test": "jest",
-    "lint": "tslint -c tslint.json --project tsconfig.json",
-    "prepare": "yarn lint && yarn build && yarn test"
-  },
-  "keywords": [
-    "React",
-    "Accordion",
-    "Typescript",
-    "Widget"
-  ],
-  "author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
-  "repository": "https://github.com/scriptex/react-ion",
-  "bugs": {
-    "url": "https://github.com/scriptex/react-ion/issues",
-    "email": "scriptex.bg@gmail.com"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2"
-  },
-  "peerDependencies": {
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2"
-  },
-  "devDependencies": {
-    "@types/jest": "23.3.10",
-    "@types/react": "16.4.16",
-    "@types/react-dom": "16.0.11",
-    "@types/react-test-renderer": "16.0.3",
-    "jest": "23.6.0",
-    "react-test-renderer": "16.6.3",
-    "ts-jest": "22.4.6",
-    "tslint": "5.11.0",
-    "tslint-react": "3.6.0",
-    "typescript": "3.2.1"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "transform": {
-      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
-  }
+	"name": "react-accordion-ts",
+	"version": "0.1.1",
+	"description": "A ReactJS Accordion component",
+	"main": "dist/index.js",
+	"style": "src/panel.css",
+	"scripts": {
+		"clear": "rm -rf dist",
+		"start": "tsc -w",
+		"build": "yarn clear && tsc --build tsconfig.json",
+		"test": "jest",
+		"lint": "tslint -c tslint.json --project tsconfig.json",
+		"prepare": "yarn lint && yarn build && yarn test"
+	},
+	"keywords": [
+		"React",
+		"Accordion",
+		"Typescript",
+		"Widget"
+	],
+	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
+	"repository": "https://github.com/scriptex/react-ion",
+	"bugs": {
+		"url": "https://github.com/scriptex/react-ion/issues",
+		"email": "scriptex.bg@gmail.com"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"react": "16.6.3",
+		"react-dom": "16.6.3"
+	},
+	"peerDependencies": {
+		"react": "16.5.2",
+		"react-dom": "16.5.2"
+	},
+	"devDependencies": {
+		"@types/jest": "23.3.10",
+		"@types/react": "16.7.10",
+		"@types/react-dom": "16.0.11",
+		"@types/react-test-renderer": "16.0.3",
+		"jest": "23.6.0",
+		"react-test-renderer": "16.6.3",
+		"ts-jest": "23.10.5",
+		"tslint": "5.11.0",
+		"tslint-react": "3.6.0",
+		"typescript": "3.2.1"
+	},
+	"jest": {
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js"
+		],
+		"transform": {
+			"\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+		},
+		"testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
+	}
 }

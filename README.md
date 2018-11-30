@@ -40,17 +40,15 @@ const items = news.map(({ date, title, content }) => ({
 	content: <p>{content}</p>
 }));
 
-export const MyComponent = () => (
-	<Accordion items={news} duration={300} multiple={true} />
-);
+export const MyComponent = () => <Accordion items={news} duration={300} multiple={true} />;
 ```
 
 ## Props
 
 1. items: Array of objects with the following properties:
 
-   - title [Required] - React Node
-   - content [Required] - React Node
+    - title [Required] - React Node
+    - content [Required] - React Node
 
 2. Duration [Required] - Number (Duration of the toggling transition)
 

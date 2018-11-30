@@ -25,6 +25,7 @@ class Accordion extends React.Component<Props> {
 		super(props);
 	}
 
+	// prettier-ignore
 	public activatePanel = (index: number): void => {
 		if (!this.props.multiple) {
 			this.setState((prev: AccordionState) => ({
@@ -39,20 +40,20 @@ class Accordion extends React.Component<Props> {
 
 		return Array.isArray(items) && items.length
 			? items.map(({ title, content }, index) => (
-				<div className="accordion" role="tablist">
-					<Panel
-						key={index}
-						title={title}
-						index={index}
-						duration={duration}
-						multiple={multiple}
-						activeTab={activeTab}
-						activatePanel={this.activatePanel}
-					>
-						{content}
-					</Panel>
-				</div>
-			))
+					<div className="accordion" role="tablist">
+						<Panel
+							key={index}
+							title={title}
+							index={index}
+							duration={duration}
+							multiple={multiple}
+							activeTab={activeTab}
+							activatePanel={this.activatePanel}
+						>
+							{content}
+						</Panel>
+					</div>
+			  ))
 			: '';
 	}
 }
