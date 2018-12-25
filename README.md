@@ -5,7 +5,6 @@
 [![npm](https://img.shields.io/npm/dt/react-accordion-ts.svg)](https://www.npmjs.com/package/react-accordion-ts)
 [![npm](https://img.shields.io/npm/v/react-accordion-ts.svg)](https://www.npmjs.com/package/react-accordion-ts)
 [![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/react-accordion-ts/README.md)](https://github.com/scriptex/react-accordion-ts/)
-[![Greenkeeper badge](https://badges.greenkeeper.io/scriptex/react-accordion-ts.svg)](https://greenkeeper.io/)
 
 # React Accordion
 
