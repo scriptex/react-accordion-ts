@@ -39,7 +39,7 @@ const items = news.map(({ date, title, content }) => ({
 	content: <p>{content}</p>
 }));
 
-export const MyComponent = () => <Accordion items={news} duration={300} multiple={true} />;
+export const MyComponent = () => <Accordion items={items} duration={300} multiple={true} />;
 ```
 
 ## Props
