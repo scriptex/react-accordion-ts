@@ -10,6 +10,16 @@
 
 An accordion widget for React applications written in Typescript.
 
+## Install
+
+```sh
+npm i react-accordion-ts
+
+# or
+
+yarn add react-accordion-ts
+```
+
 ## Usage
 
 ```javascript
