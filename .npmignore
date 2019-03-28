@@ -31,6 +31,8 @@ Thumbs.db
 yarn.lock
 
 # Config files
+_config.yml
+_.config.yml
 renovate.json
 rollup.config.js
 webpack.config.js
