@@ -19,9 +19,9 @@
 		"Widget"
 	],
 	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
-	"repository": "https://github.com/scriptex/react-ion",
+	"repository": "https://github.com/scriptex/react-accordion-ts",
 	"bugs": {
-		"url": "https://github.com/scriptex/react-ion/issues",
+		"url": "https://github.com/scriptex/react-accordion-ts/issues",
 		"email": "scriptex.bg@gmail.com"
 	},
 	"license": "MIT",
