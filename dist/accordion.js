@@ -38,7 +38,7 @@ var Accordion = (function (_super) {
         return Array.isArray(items) && items.length
             ? items.map(function (_a, index) {
                 var title = _a.title, content = _a.content;
-                return (React.createElement("div", { className: "accordion", role: "tablist" },
+                return (React.createElement("div", { className: "accordion", role: "tablist", key: index },
                     React.createElement(panel_1.default, { key: index, title: title, index: index, duration: duration, multiple: multiple, activeTab: activeTab, activatePanel: _this.activatePanel }, content)));
             })
             : '';

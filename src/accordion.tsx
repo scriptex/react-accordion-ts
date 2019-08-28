@@ -40,7 +40,7 @@ class Accordion extends React.Component<Props> {
 
 		return Array.isArray(items) && items.length
 			? items.map(({ title, content }, index) => (
-					<div className="accordion" role="tablist">
+					<div className="accordion" role="tablist" key={index}>
 						<Panel
 							key={index}
 							title={title}
