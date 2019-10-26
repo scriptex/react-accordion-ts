@@ -36,7 +36,7 @@
 	"devDependencies": {
 		"@types/jest": "24.0.19",
 		"@types/react": "16.9.11",
-		"@types/react-dom": "16.9.2",
+		"@types/react-dom": "16.9.3",
 		"@types/react-test-renderer": "16.9.1",
 		"jest": "24.9.0",
 		"react-test-renderer": "16.11.0",
