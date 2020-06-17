@@ -1,7 +1,7 @@
 [![GitHub release](https://img.shields.io/github/release/scriptex/react-accordion-ts.svg)](https://github.com/scriptex/react-accordion-ts/releases/latest)
 [![GitHub issues](https://img.shields.io/github/issues/scriptex/react-accordion-ts.svg)](https://github.com/scriptex/react-accordion-ts/issues)
 [![GitHub last commit](https://img.shields.io/github/last-commit/scriptex/react-accordion-ts.svg)](https://github.com/scriptex/react-accordion-ts/commits/master)
-[![Build Status](https://travis-ci.org/scriptex/react-accordion-ts.svg?branch=master)](https://travis-ci.org/scriptex/react-accordion-ts)
+[![Build Status](https://travis-ci.com/scriptex/react-accordion-ts.svg?branch=master)](https://travis-ci.com/scriptex/react-accordion-ts)
 [![npm](https://img.shields.io/npm/dt/react-accordion-ts.svg)](https://www.npmjs.com/package/react-accordion-ts)
 [![npm](https://img.shields.io/npm/v/react-accordion-ts.svg)](https://www.npmjs.com/package/react-accordion-ts)
 [![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/react-accordion-ts/README.md)](https://github.com/scriptex/react-accordion-ts/)
