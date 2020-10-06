@@ -19,3 +19,5 @@ Thumbs.db
 
 # Build directory
 /dist
+/demo/.cache
+/demo/dist

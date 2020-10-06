@@ -4,6 +4,7 @@
 	"description": "A ReactJS Accordion component",
 	"main": "dist/index.js",
 	"style": "src/panel.css",
+	"types": "dist/index.d.ts",
 	"scripts": {
 		"clear": "rm -rf dist",
 		"start": "tsc -w",
@@ -38,7 +39,8 @@
 		"@types/react": "16.9.51",
 		"@types/react-dom": "16.9.8",
 		"@types/react-test-renderer": "16.9.3",
-		"jest": "26.5.0",
+		"cssnano": "4.1.10",
+		"jest": "26.5.2",
 		"react-test-renderer": "16.13.1",
 		"ts-jest": "26.4.1",
 		"tslint": "6.1.3",
