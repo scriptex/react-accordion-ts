@@ -6,7 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Dependency directory
-node_modules/
+node_modules
 
 # Misc
 .DS_Store
@@ -31,8 +31,12 @@ Thumbs.db
 yarn.lock
 
 # Config files
+.github
+.whitesource
 _config.yml
 _.config.yml
+tslint.json
+tsconfig.json
 renovate.json
 rollup.config.js
 webpack.config.js
@@ -40,3 +44,8 @@ webpack.config.js
 # Prettier
 .prettierrc
 .prettierignore
+
+# Project specific
+!dist
+demo
+__tests__

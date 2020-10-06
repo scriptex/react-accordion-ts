@@ -1,16 +1,17 @@
 {
 	"name": "react-accordion-ts",
-	"version": "0.2.0",
+	"version": "1.0.0",
 	"description": "A ReactJS Accordion component",
 	"main": "dist/index.js",
 	"style": "src/panel.css",
+	"types": "dist/index.d.ts",
 	"scripts": {
 		"clear": "rm -rf dist",
 		"start": "tsc -w",
 		"build": "yarn clear && tsc --build tsconfig.json",
 		"test": "jest",
 		"lint": "tslint -c tslint.json --project tsconfig.json",
-		"prepare": "yarn lint && yarn build && yarn test"
+		"prod": "yarn lint && yarn build && yarn test"
 	},
 	"keywords": [
 		"React",
@@ -38,7 +39,8 @@
 		"@types/react": "16.9.51",
 		"@types/react-dom": "16.9.8",
 		"@types/react-test-renderer": "16.9.3",
-		"jest": "26.5.0",
+		"cssnano": "4.1.10",
+		"jest": "26.5.2",
 		"react-test-renderer": "16.13.1",
 		"ts-jest": "26.4.1",
 		"tslint": "6.1.3",
@@ -52,7 +54,7 @@
 			"js"
 		],
 		"transform": {
-			"\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+			"\\.(ts|tsx)$": "ts-jest"
 		},
 		"testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
 	}

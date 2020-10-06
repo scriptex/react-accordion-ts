@@ -8,7 +8,14 @@
 
 # React Accordion
 
-An accordion widget for React applications written in Typescript.
+> An accordion widget for React web applications written in Typescript.
+
+## About
+
+The latest version of the widget has been built using the Hooks API introduced with React 16.
+If you need to support older versions of React, please install [an older version](https://www.npmjs.com/package/react-accordion-ts/v/0.2.0).
+
+**Please note that this widget does NOT work with React Native.**
 
 ## Install
 
@@ -52,9 +59,25 @@ const items = news.map(({ date, title, content }) => ({
 export const MyComponent = () => <Accordion items={items} duration={300} multiple={true} />;
 ```
 
+You can also use the basic stylesheet included:
+
+```javascript
+import 'react-accordion-ts/src/panel.css';
+```
+
+or
+
+```css
+@import 'react-accordion-ts/src/panel.css';
+
+// If the above doesn't work, add a ~ in the beginning:
+
+@import '~react-accordion-ts/src/panel.css';
+```
+
 ## Props
 
-1. items: Array of objects with the following properties:
+1. items [Required] - Array of objects with the following shape:
 
     - title [Required] - React Node
     - content [Required] - React Node

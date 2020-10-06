@@ -116,4 +116,4 @@ Array [
 ]
 `;
 
-exports[`Accordion should render properly 2`] = `""`;
+exports[`Accordion should render properly 2`] = `null`;

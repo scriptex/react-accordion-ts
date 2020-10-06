@@ -1,61 +1,51 @@
 import * as React from 'react';
+
 import Panel from './panel';
 
-interface AccordionItem {
+export interface AccordionItem {
 	title: React.ReactNode;
 	content: React.ReactNode;
 }
 
-interface AccordionState {
-	activeTab: number;
-}
-
-interface Props {
-	items: Array<AccordionItem>;
+export interface AccordionProps {
+	items: ReadonlyArray<AccordionItem>;
 	duration: number;
 	multiple: boolean;
 }
 
-class Accordion extends React.Component<Props> {
-	public state: AccordionState = {
-		activeTab: -1
-	};
+// codebeat:disable[LOC]
+export const Accordion: React.FunctionComponent<Readonly<AccordionProps>> = (props: Readonly<AccordionProps>) => {
+	const [activeTab, setActiveTab] = React.useState(-1);
+	const { items, duration, multiple } = props;
 
-	constructor(props: Props) {
-		super(props);
-	}
+	const Items = () => (
+		<>
+			{items.map(({ title, content }, index) => (
+				<div className="accordion" role="tablist" key={index}>
+					<Panel
+						key={index}
+						title={title}
+						index={index}
+						duration={duration}
+						multiple={multiple}
+						activeTab={activeTab}
+						activatePanel={(i: number): void => {
+							if (props.multiple) {
+								return;
+							}
 
-	// prettier-ignore
-	public activatePanel = (index: number): void => {
-		if (!this.props.multiple) {
-			this.setState((prev: AccordionState) => ({
-				activeTab: prev.activeTab === index ? -1 : index
-			}));
-		}
-	}
+							setActiveTab(activeTab === i ? -1 : i);
+						}}
+					>
+						{content}
+					</Panel>
+				</div>
+			))}
+		</>
+	);
 
-	public render(): React.ReactNode {
-		const { activeTab } = this.state;
-		const { items, duration, multiple } = this.props;
-
-		return Array.isArray(items) && items.length
-			? items.map(({ title, content }, index) => (
-					<div className="accordion" role="tablist" key={index}>
-						<Panel
-							key={index}
-							title={title}
-							index={index}
-							duration={duration}
-							multiple={multiple}
-							activeTab={activeTab}
-							activatePanel={this.activatePanel}
-						>
-							{content}
-						</Panel>
-					</div>
-			  ))
-			: '';
-	}
-}
+	return Array.isArray(items) && items.length ? <Items /> : null;
+};
+// codebeat:enable[LOC]
 
 export default Accordion;

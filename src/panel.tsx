@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { findDOMNode } from 'react-dom';
 
-interface Props {
+export interface PanelProps {
 	index: number;
 	title: React.ReactNode;
 	duration: number;
@@ -11,61 +11,48 @@ interface Props {
 	activatePanel(index: number): void;
 }
 
-interface PanelState {
-	height: number;
-	isActive: boolean;
-}
-
-interface ExtendedElement extends Element {
-	querySelector(selector: string): HTMLElement;
-}
-
-class Panel extends React.Component<Props> {
-	public state: PanelState = {
-		height: 0,
-		isActive: false
+// codebeat:disable[LOC]
+export const Panel: React.FunctionComponent<Readonly<PanelProps>> = (props: Readonly<PanelProps>) => {
+	const ref = React.useRef(null);
+	const [height, setHeight] = React.useState(0);
+	const [active, setActive] = React.useState(false);
+	const { index, title, multiple, children, activeTab, activatePanel } = props;
+	const isActive = multiple ? active : activeTab === index;
+	const innerStyle = {
+		height: `${isActive ? height : 0}px`
 	};
 
-	constructor(props: Props) {
-		super(props);
-	}
+	React.useEffect(() => {
+		const timeout = setTimeout(() => {
+			const el = findDOMNode(ref.current) as HTMLDivElement;
+			const newHeight = el.querySelector('.panel__body')!.scrollHeight;
 
-	public componentDidMount(): void {
-		setTimeout(() => {
-			const el = findDOMNode(this);
-			const height = (el as ExtendedElement).querySelector('.panel__body').scrollHeight;
+			setHeight(newHeight);
+		}, props.duration || 300);
 
-			this.setState({ height });
-		}, this.props.duration || 300);
-	}
-
-	public render(): React.ReactNode {
-		const { index, title, multiple, children, activeTab, activatePanel } = this.props;
-
-		const isActive = multiple ? this.state.isActive : activeTab === index;
-
-		const innerStyle = {
-			height: `${isActive ? this.state.height : 0}px`
+		return () => {
+			clearTimeout(timeout);
 		};
+	});
 
-		return (
-			<div className="panel" role="tabpanel" aria-expanded={isActive}>
-				<button
-					role="tab"
-					className="panel__head"
-					onClick={_ => {
-						multiple ? this.setState({ isActive: !this.state.isActive }) : activatePanel(index);
-					}}
-				>
-					{title}
-				</button>
+	return (
+		<div className="panel" role="tabpanel" aria-expanded={isActive} ref={ref}>
+			<button
+				role="tab"
+				className="panel__head"
+				onClick={() => {
+					multiple ? setActive(!active) : activatePanel(index);
+				}}
+			>
+				{title}
+			</button>
 
-				<div style={innerStyle} className="panel__body" aria-hidden={!isActive}>
-					<div className="panel__content">{children}</div>
-				</div>
+			<div style={innerStyle} className="panel__body" aria-hidden={!isActive}>
+				<div className="panel__content">{children}</div>
 			</div>
-		);
-	}
-}
+		</div>
+	);
+};
+// codebeat:enable[LOC]
 
 export default Panel;
