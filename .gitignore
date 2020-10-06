@@ -6,7 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Dependency directory
-node_modules/
+node_modules
 
 # Misc
 .DS_Store
@@ -19,5 +19,7 @@ Thumbs.db
 
 # Build directory
 dist
+
+# Demo
 demo/.cache
 demo/dist
