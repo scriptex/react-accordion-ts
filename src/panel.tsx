@@ -40,7 +40,7 @@ export const Panel: React.FunctionComponent<Readonly<PanelProps>> = (props: Read
 			<button
 				role="tab"
 				className="panel__head"
-				onClick={_ => {
+				onClick={() => {
 					multiple ? setActive(!active) : activatePanel(index);
 				}}
 			>

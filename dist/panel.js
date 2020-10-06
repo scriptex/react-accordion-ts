@@ -23,7 +23,7 @@ exports.Panel = function (props) {
         };
     });
     return (React.createElement("div", { className: "panel", role: "tabpanel", "aria-expanded": isActive, ref: ref },
-        React.createElement("button", { role: "tab", className: "panel__head", onClick: function (_) {
+        React.createElement("button", { role: "tab", className: "panel__head", onClick: function () {
                 multiple ? setActive(!active) : activatePanel(index);
             } }, title),
         React.createElement("div", { style: innerStyle, className: "panel__body", "aria-hidden": !isActive },
