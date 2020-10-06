@@ -13,6 +13,7 @@ export interface AccordionProps {
 	multiple: boolean;
 }
 
+// codebeat:disable[LOC]
 export const Accordion: React.FunctionComponent<Readonly<AccordionProps>> = (props: Readonly<AccordionProps>) => {
 	const [activeTab, setActiveTab] = React.useState(-1);
 	const { items, duration, multiple } = props;
@@ -45,5 +46,6 @@ export const Accordion: React.FunctionComponent<Readonly<AccordionProps>> = (pro
 
 	return Array.isArray(items) && items.length ? <Items /> : null;
 };
+// codebeat:enable[LOC]
 
 export default Accordion;

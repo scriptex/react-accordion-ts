@@ -11,6 +11,7 @@ export interface PanelProps {
 	activatePanel(index: number): void;
 }
 
+// codebeat:disable[LOC]
 export const Panel: React.FunctionComponent<Readonly<PanelProps>> = (props: Readonly<PanelProps>) => {
 	const ref = React.useRef(null);
 	const [height, setHeight] = React.useState(0);
@@ -52,5 +53,6 @@ export const Panel: React.FunctionComponent<Readonly<PanelProps>> = (props: Read
 		</div>
 	);
 };
+// codebeat:enable[LOC]
 
 export default Panel;
