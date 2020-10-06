@@ -18,6 +18,6 @@ ehthumbs.db
 Thumbs.db
 
 # Build directory
-/dist
-/demo/.cache
-/demo/dist
+dist
+demo/.cache
+demo/dist
