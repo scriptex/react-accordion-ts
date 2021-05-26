@@ -25,9 +25,9 @@ export const Panel: React.FunctionComponent<Readonly<PanelProps>> = (props: Read
 	React.useEffect(() => {
 		const timeout = setTimeout(() => {
 			const el = findDOMNode(ref.current) as HTMLDivElement;
-			const newHeight = el.querySelector('.panel__body')!.scrollHeight;
+			const newHeight = el?.querySelector('.panel__body')?.scrollHeight;
 
-			setHeight(newHeight);
+			setHeight(newHeight || height);
 		}, props.duration || 300);
 
 		return () => {
