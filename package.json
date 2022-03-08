@@ -36,7 +36,7 @@
 		"@types/react": "17.0.39",
 		"@types/react-dom": "17.0.13",
 		"@types/react-test-renderer": "17.0.1",
-		"cssnano": "5.1.0",
+		"cssnano": "5.1.1",
 		"jest": "27.5.1",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
