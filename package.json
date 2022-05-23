@@ -34,7 +34,7 @@
 	"devDependencies": {
 		"@types/jest": "27.5.1",
 		"@types/react": "18.0.9",
-		"@types/react-dom": "18.0.4",
+		"@types/react-dom": "18.0.5",
 		"@types/react-test-renderer": "18.0.0",
 		"cssnano": "5.1.9",
 		"jest": "28.1.0",
