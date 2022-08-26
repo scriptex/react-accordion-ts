@@ -1,6 +1,6 @@
 {
 	"name": "react-accordion-ts",
-	"version": "1.0.2",
+	"version": "1.1.0",
 	"description": "A ReactJS Accordion component",
 	"main": "dist/index.js",
 	"style": "src/panel.css",
