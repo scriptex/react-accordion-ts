@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Accordion should render properly 1`] = `
+exports[`Accordion should render properly with items 1`] = `
 [
   <div
     className="accordion"
@@ -44,7 +44,7 @@ exports[`Accordion should render properly 1`] = `
     role="tablist"
   >
     <div
-      aria-expanded={false}
+      aria-expanded={true}
       className="panel"
       role="tabpanel"
     >
@@ -58,7 +58,7 @@ exports[`Accordion should render properly 1`] = `
         </h2>
       </button>
       <div
-        aria-hidden={true}
+        aria-hidden={false}
         className="panel__body"
         style={
           {
@@ -81,7 +81,7 @@ exports[`Accordion should render properly 1`] = `
     role="tablist"
   >
     <div
-      aria-expanded={false}
+      aria-expanded={true}
       className="panel"
       role="tabpanel"
     >
@@ -95,7 +95,7 @@ exports[`Accordion should render properly 1`] = `
         </h2>
       </button>
       <div
-        aria-hidden={true}
+        aria-hidden={false}
         className="panel__body"
         style={
           {
@@ -116,4 +116,4 @@ exports[`Accordion should render properly 1`] = `
 ]
 `;
 
-exports[`Accordion should render properly 2`] = `null`;
+exports[`Accordion should render properly without items 1`] = `null`;

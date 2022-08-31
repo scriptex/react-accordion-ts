@@ -3,34 +3,40 @@ import * as React from 'react';
 import Panel from './panel';
 
 export interface AccordionItem {
+	open?: boolean;
 	title: React.ReactNode;
 	content: React.ReactNode;
 }
 
 export interface AccordionProps {
+	open?: number;
 	items: ReadonlyArray<AccordionItem>;
 	duration: number;
 	multiple: boolean;
 }
 
-// codebeat:disable[LOC]
-export const Accordion: React.FunctionComponent<Readonly<AccordionProps>> = (props: Readonly<AccordionProps>) => {
-	const [activeTab, setActiveTab] = React.useState(-1);
-	const { items, duration, multiple } = props;
+export const Accordion: React.FunctionComponent<Readonly<AccordionProps>> = ({
+	open = -1,
+	items,
+	duration,
+	multiple
+}: AccordionProps) => {
+	const [activeTab, setActiveTab] = React.useState(open);
 
 	const Items = () => (
 		<>
-			{items.map(({ title, content }, index) => (
+			{items.map(({ open, title, content }, index) => (
 				<div className="accordion" role="tablist" key={index}>
 					<Panel
 						key={index}
+						open={open}
 						title={title}
 						index={index}
 						duration={duration}
 						multiple={multiple}
 						activeTab={activeTab}
 						activatePanel={(i: number): void => {
-							if (props.multiple) {
+							if (multiple) {
 								return;
 							}
 
@@ -46,6 +52,5 @@ export const Accordion: React.FunctionComponent<Readonly<AccordionProps>> = (pro
 
 	return Array.isArray(items) && items.length ? <Items /> : null;
 };
-// codebeat:enable[LOC]
 
 export default Accordion;

@@ -9,16 +9,19 @@ export const news = [
 	{
 		date: '13-10-2018',
 		title: 'Awesome title',
-		content: 'Fantastic content'
+		content: 'Fantastic content',
+		open: true
 	},
 	{
 		date: '13-10-2018',
 		title: 'Awesome title',
-		content: 'Fantastic content'
+		content: 'Fantastic content',
+		open: true
 	}
 ];
 
-export const items = news.map(({ date, title, content }) => ({
+export const items = news.map(({ open, date, title, content }) => ({
+	open,
 	title: <h2>{date + ' - ' + title}</h2>,
 	content: <p>{content}</p>
 }));
