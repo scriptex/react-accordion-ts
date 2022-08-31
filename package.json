@@ -10,7 +10,7 @@
 		"start": "tsc -w",
 		"build": "yarn clear && tsc --build tsconfig.json",
 		"test": "jest",
-		"lint": "eslint 'src/**/*.{ts,tsx}' 'demo/**/*.{ts,tsx}'",
+		"lint": "eslint 'src/**/*.{ts,tsx}' 'demo/**/*.{ts,tsx}' '__tests__/**/*.{ts,tsx}'",
 		"prod": "yarn lint && yarn build && yarn test"
 	},
 	"keywords": [
