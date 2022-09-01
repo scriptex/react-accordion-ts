@@ -35,7 +35,7 @@ import { Accordion } from 'react-accordion-ts';
 
 const content = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
 
-export const news = [
+const news = [
 	{
 		date: '12-10-2018',
 		title: 'Awesome title',
@@ -55,7 +55,7 @@ export const news = [
 	}
 ];
 
-export const items = news.map(({ open, date, title, content }) => ({
+const items = news.map(({ open, date, title, content }) => ({
 	open,
 	title: <h2>{date + ' - ' + title}</h2>,
 	content: (
