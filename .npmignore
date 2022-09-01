@@ -33,11 +33,13 @@ yarn.lock
 # Config files
 .github
 .codebeatsettings
+.eslintrc
 .whitesource
 _config.yml
 _.config.yml
 tslint.json
 tsconfig.json
+tsconfig-lint.json
 renovate.json
 rollup.config.js
 webpack.config.js
