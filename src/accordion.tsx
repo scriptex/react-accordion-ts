@@ -1,51 +1,50 @@
 import * as React from 'react';
 
-import Panel from './panel';
+import { Panel } from './panel';
 
-export interface AccordionItem {
+export interface AccordionPanel {
+	open?: boolean;
 	title: React.ReactNode;
 	content: React.ReactNode;
 }
 
 export interface AccordionProps {
-	items: ReadonlyArray<AccordionItem>;
+	open?: number;
+	items: ReadonlyArray<AccordionPanel>;
 	duration: number;
 	multiple: boolean;
 }
 
-// codebeat:disable[LOC]
-export const Accordion: React.FunctionComponent<Readonly<AccordionProps>> = (props: Readonly<AccordionProps>) => {
-	const [activeTab, setActiveTab] = React.useState(-1);
-	const { items, duration, multiple } = props;
+export const Accordion: React.FunctionComponent<Readonly<AccordionProps>> = ({
+	open = -1,
+	items,
+	duration,
+	multiple
+}: AccordionProps) => {
+	const [activeTab, setActiveTab] = React.useState(open);
 
-	const Items = () => (
-		<>
-			{items.map(({ title, content }, index) => (
-				<div className="accordion" role="tablist" key={index}>
-					<Panel
-						key={index}
-						title={title}
-						index={index}
-						duration={duration}
-						multiple={multiple}
-						activeTab={activeTab}
-						activatePanel={(i: number): void => {
-							if (props.multiple) {
-								return;
-							}
+	return Array.isArray(items) && items.length ? (
+		<div className="accordion" role="tablist">
+			{items.map(({ open, title, content }, index) => (
+				<Panel
+					key={index}
+					open={open}
+					title={title}
+					index={index}
+					duration={duration}
+					multiple={multiple}
+					activeTab={activeTab}
+					activatePanel={(i: number): void => {
+						if (multiple) {
+							return;
+						}
 
-							setActiveTab(activeTab === i ? -1 : i);
-						}}
-					>
-						{content}
-					</Panel>
-				</div>
+						setActiveTab(activeTab === i ? -1 : i);
+					}}
+				>
+					{content}
+				</Panel>
 			))}
-		</>
-	);
-
-	return Array.isArray(items) && items.length ? <Items /> : null;
+		</div>
+	) : null;
 };
-// codebeat:enable[LOC]
-
-export default Accordion;

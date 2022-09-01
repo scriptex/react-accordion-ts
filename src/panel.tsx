@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { findDOMNode } from 'react-dom';
 
 export interface PanelProps {
+	open?: boolean;
 	index: number;
 	title: React.ReactNode;
 	duration: number;
@@ -11,24 +11,32 @@ export interface PanelProps {
 	activatePanel(index: number): void;
 }
 
-// codebeat:disable[LOC]
-export const Panel: React.FunctionComponent<Readonly<PanelProps>> = (props: Readonly<PanelProps>) => {
-	const ref = React.useRef(null);
+export const Panel: React.FunctionComponent<Readonly<PanelProps>> = ({
+	open,
+	index,
+	title,
+	duration,
+	multiple,
+	children,
+	activeTab,
+	activatePanel
+}: PanelProps) => {
+	const ref: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
 	const [height, setHeight] = React.useState(0);
-	const [active, setActive] = React.useState(false);
-	const { index, title, multiple, children, activeTab, activatePanel } = props;
+	const [active, setActive] = React.useState(!!open);
+
 	const isActive = multiple ? active : activeTab === index;
-	const innerStyle = {
+	const style: React.CSSProperties = {
 		height: `${isActive ? height : 0}px`
 	};
 
 	React.useEffect(() => {
 		const timeout = setTimeout(() => {
-			const el = findDOMNode(ref.current) as HTMLDivElement;
+			const el = ref.current;
 			const newHeight = el?.querySelector('.panel__body')?.scrollHeight;
 
 			setHeight(newHeight || height);
-		}, props.duration || 300);
+		}, duration || 300);
 
 		return () => {
 			clearTimeout(timeout);
@@ -47,12 +55,9 @@ export const Panel: React.FunctionComponent<Readonly<PanelProps>> = (props: Read
 				{title}
 			</button>
 
-			<div style={innerStyle} className="panel__body" aria-hidden={!isActive}>
+			<div style={style} className="panel__body" aria-hidden={!isActive}>
 				<div className="panel__content">{children}</div>
 			</div>
 		</div>
 	);
 };
-// codebeat:enable[LOC]
-
-export default Panel;
