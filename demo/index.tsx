@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 
+import 'scriptex-socials';
+
 import { items } from './mocks';
 import { Accordion } from '../dist/index';
 
@@ -24,6 +26,15 @@ const elements = [
 
 const App = () => (
 	<>
+		<a
+			href="https://github.com/scriptex/react-accordion-ts"
+			title="See code on Github"
+			className="github-fork-ribbon"
+			data-ribbon="See code on Github"
+		>
+			See code on Github
+		</a>
+
 		{elements.map(({ hint, title, content }, index) => (
 			<React.Fragment key={index}>
 				<div>
@@ -35,6 +46,8 @@ const App = () => (
 				{content}
 			</React.Fragment>
 		))}
+
+		<social-links></social-links>
 	</>
 );
 

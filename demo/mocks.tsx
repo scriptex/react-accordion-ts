@@ -6,18 +6,18 @@ const content = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratio
 export const news = [
 	{
 		date: '12-10-2018',
-		title: 'Awesome title',
+		title: 'Lorem ipsum',
 		content: [content]
 	},
 	{
 		date: '13-10-2018',
-		title: 'Awesome title',
+		title: 'Dolor sit amet',
 		content: [content, content],
 		open: true
 	},
 	{
 		date: '13-10-2018',
-		title: 'Awesome title',
+		title: 'Consectetur adipisicing',
 		content: [content],
 		open: true
 	}

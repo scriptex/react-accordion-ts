@@ -16,7 +16,7 @@ exports[`Accordion should render properly with items 1`] = `
       role="tab"
     >
       <h2>
-        12-10-2018 - Awesome title
+        12-10-2018 - Lorem ipsum
       </h2>
     </button>
     <div
@@ -48,7 +48,7 @@ exports[`Accordion should render properly with items 1`] = `
       role="tab"
     >
       <h2>
-        13-10-2018 - Awesome title
+        13-10-2018 - Dolor sit amet
       </h2>
     </button>
     <div
@@ -83,7 +83,7 @@ exports[`Accordion should render properly with items 1`] = `
       role="tab"
     >
       <h2>
-        13-10-2018 - Awesome title
+        13-10-2018 - Consectetur adipisicing
       </h2>
     </button>
     <div

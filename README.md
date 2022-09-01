@@ -12,10 +12,16 @@
 
 ## About
 
+This is a collapsible widget for React web applications written in TypeScript without any external dependencies (except React of course).
+
+It uses the Hooks API and CSS to animate the collapsible contents.
+
 The latest version of the widget has been built using the Hooks API introduced with React 16.
 If you need to support older versions of React, please install [an older version](https://www.npmjs.com/package/react-accordion-ts/v/0.2.0).
 
 **Please note that this widget does NOT work with React Native.**
+
+[You can see the demo here](https://react-accordion-ts.atanas.info/)
 
 ## Install
 
