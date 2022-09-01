@@ -30,30 +30,41 @@ yarn add react-accordion-ts
 ## Usage
 
 ```javascript
-import React from 'react';
+import * as React from 'react';
 import Accordion from 'react-accordion-ts';
 
-const news = [
+const content = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
+
+export const news = [
 	{
 		date: '12-10-2018',
 		title: 'Awesome title',
-		content: 'Fantastic content'
+		content: [content]
 	},
 	{
 		date: '13-10-2018',
 		title: 'Awesome title',
-		content: 'Fantastic content'
+		content: [content, content],
+		open: true
 	},
 	{
 		date: '13-10-2018',
 		title: 'Awesome title',
-		content: 'Fantastic content'
+		content: [content],
+		open: true
 	}
 ];
 
-const items = news.map(({ date, title, content }) => ({
+export const items = news.map(({ open, date, title, content }) => ({
+	open,
 	title: <h2>{date + ' - ' + title}</h2>,
-	content: <p>{content}</p>
+	content: (
+		<>
+			{content.map((item: string, index: number) => (
+				<p key={index}>{item}</p>
+			))}
+		</>
+	)
 }));
 
 export const MyComponent = () => <Accordion items={items} duration={300} multiple={true} />;
@@ -77,14 +88,22 @@ or
 
 ## Props
 
-1. items [Required] - Array of objects with the following shape:
+### Accordion props
 
-    - title [Required] - React Node
-    - content [Required] - React Node
+| Prop       | Type              | Required | Default | Description                                                              |
+| ---------- | ----------------- | -------- | ------- | ------------------------------------------------------------------------ |
+| `open`     | `number`          | false    | -1      | Zero based index representing the accordion item which is initially open |
+| `items`    | `AccordionItem[]` | true     | -       | Array of `AccordionPanel` objects (see below)                            |
+| `duration` | `number`          | false    | 300     | Duration (in milliseconds) of the expanding/collapsing animation         |
+| `multiple` | `boolean`         | false    | false   | A ReactNode representing the content of the slide                        |
 
-2. Duration [Required] - Number (Duration of the toggling transition)
+### Accordion panel props
 
-3. Multiple [Required] - Boolean (If false, only one panel can be opened at any time)
+| Prop      | Type        | Required | Description                                                                            |
+| --------- | ----------- | -------- | -------------------------------------------------------------------------------------- |
+| `open`    | `boolean`   | false    | Whether the panel should be initially open                                             |
+| `title`   | `ReactNode` | true     | The title of the panel. This is the element which expands/collapses the panel on click |
+| `content` | `ReactNode` | true     | The panel content.                                                                     |
 
 ## LICENSE
 

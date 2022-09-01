@@ -1,119 +1,110 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Accordion should render properly with items 1`] = `
-[
+<div
+  className="accordion"
+  role="tablist"
+>
   <div
-    className="accordion"
-    role="tablist"
+    aria-expanded={false}
+    className="panel"
+    role="tabpanel"
   >
-    <div
-      aria-expanded={false}
-      className="panel"
-      role="tabpanel"
+    <button
+      className="panel__head"
+      onClick={[Function]}
+      role="tab"
     >
-      <button
-        className="panel__head"
-        onClick={[Function]}
-        role="tab"
-      >
-        <h2>
-          12-10-2018 - Awesome title
-        </h2>
-      </button>
-      <div
-        aria-hidden={true}
-        className="panel__body"
-        style={
-          {
-            "height": "0px",
-          }
+      <h2>
+        12-10-2018 - Awesome title
+      </h2>
+    </button>
+    <div
+      aria-hidden={true}
+      className="panel__body"
+      style={
+        {
+          "height": "0px",
         }
+      }
+    >
+      <div
+        className="panel__content"
       >
-        <div
-          className="panel__content"
-        >
-          <p>
-            Fantastic content
-          </p>
-        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sint voluptatum sed suscipit fugit tempore quidem aliquid doloremque quibusdam ea.
+        </p>
       </div>
     </div>
-  </div>,
+  </div>
   <div
-    className="accordion"
-    role="tablist"
+    aria-expanded={true}
+    className="panel"
+    role="tabpanel"
   >
-    <div
-      aria-expanded={true}
-      className="panel"
-      role="tabpanel"
+    <button
+      className="panel__head"
+      onClick={[Function]}
+      role="tab"
     >
-      <button
-        className="panel__head"
-        onClick={[Function]}
-        role="tab"
-      >
-        <h2>
-          13-10-2018 - Awesome title
-        </h2>
-      </button>
-      <div
-        aria-hidden={false}
-        className="panel__body"
-        style={
-          {
-            "height": "0px",
-          }
+      <h2>
+        13-10-2018 - Awesome title
+      </h2>
+    </button>
+    <div
+      aria-hidden={false}
+      className="panel__body"
+      style={
+        {
+          "height": "0px",
         }
+      }
+    >
+      <div
+        className="panel__content"
       >
-        <div
-          className="panel__content"
-        >
-          <p>
-            Fantastic content
-          </p>
-        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sint voluptatum sed suscipit fugit tempore quidem aliquid doloremque quibusdam ea.
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sint voluptatum sed suscipit fugit tempore quidem aliquid doloremque quibusdam ea.
+        </p>
       </div>
     </div>
-  </div>,
+  </div>
   <div
-    className="accordion"
-    role="tablist"
+    aria-expanded={true}
+    className="panel"
+    role="tabpanel"
   >
-    <div
-      aria-expanded={true}
-      className="panel"
-      role="tabpanel"
+    <button
+      className="panel__head"
+      onClick={[Function]}
+      role="tab"
     >
-      <button
-        className="panel__head"
-        onClick={[Function]}
-        role="tab"
-      >
-        <h2>
-          13-10-2018 - Awesome title
-        </h2>
-      </button>
-      <div
-        aria-hidden={false}
-        className="panel__body"
-        style={
-          {
-            "height": "0px",
-          }
+      <h2>
+        13-10-2018 - Awesome title
+      </h2>
+    </button>
+    <div
+      aria-hidden={false}
+      className="panel__body"
+      style={
+        {
+          "height": "0px",
         }
+      }
+    >
+      <div
+        className="panel__content"
       >
-        <div
-          className="panel__content"
-        >
-          <p>
-            Fantastic content
-          </p>
-        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sint voluptatum sed suscipit fugit tempore quidem aliquid doloremque quibusdam ea.
+        </p>
       </div>
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`Accordion should render properly without items 1`] = `null`;
