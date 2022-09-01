@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Panel from './panel';
+import { Panel } from './panel';
 
 export interface AccordionPanel {
 	open?: boolean;
@@ -48,5 +48,3 @@ export const Accordion: React.FunctionComponent<Readonly<AccordionProps>> = ({
 		</div>
 	) : null;
 };
-
-export default Accordion;

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { findDOMNode } from 'react-dom';
 
 export interface PanelProps {
 	open?: boolean;
@@ -22,18 +21,18 @@ export const Panel: React.FunctionComponent<Readonly<PanelProps>> = ({
 	activeTab,
 	activatePanel
 }: PanelProps) => {
-	const ref = React.useRef(null);
+	const ref: React.MutableRefObject<HTMLDivElement | null> = React.useRef(null);
 	const [height, setHeight] = React.useState(0);
 	const [active, setActive] = React.useState(!!open);
 
 	const isActive = multiple ? active : activeTab === index;
-	const innerStyle = {
+	const style: React.CSSProperties = {
 		height: `${isActive ? height : 0}px`
 	};
 
 	React.useEffect(() => {
 		const timeout = setTimeout(() => {
-			const el = findDOMNode(ref.current) as HTMLDivElement;
+			const el = ref.current;
 			const newHeight = el?.querySelector('.panel__body')?.scrollHeight;
 
 			setHeight(newHeight || height);
@@ -56,11 +55,9 @@ export const Panel: React.FunctionComponent<Readonly<PanelProps>> = ({
 				{title}
 			</button>
 
-			<div style={innerStyle} className="panel__body" aria-hidden={!isActive}>
+			<div style={style} className="panel__body" aria-hidden={!isActive}>
 				<div className="panel__content">{children}</div>
 			</div>
 		</div>
 	);
 };
-
-export default Panel;

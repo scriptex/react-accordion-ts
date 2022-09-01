@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 
 import { items } from '../demo/mocks';
-import Accordion from '../src/accordion';
+import { Accordion } from '../src/accordion';
 
 describe('Accordion', () => {
 	it('should render properly with items', () => {

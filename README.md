@@ -31,7 +31,7 @@ yarn add react-accordion-ts
 
 ```javascript
 import * as React from 'react';
-import Accordion from 'react-accordion-ts';
+import { Accordion } from 'react-accordion-ts';
 
 const content = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.';
 
