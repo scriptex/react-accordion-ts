@@ -1,14 +1,29 @@
-[![GitHub release](https://img.shields.io/github/release/scriptex/react-accordion-ts.svg)](https://github.com/scriptex/react-accordion-ts/releases/latest)
-[![GitHub issues](https://img.shields.io/github/issues/scriptex/react-accordion-ts.svg)](https://github.com/scriptex/react-accordion-ts/issues)
-[![GitHub last commit](https://img.shields.io/github/last-commit/scriptex/react-accordion-ts.svg)](https://github.com/scriptex/react-accordion-ts/commits/master)
-[![Build Status](https://travis-ci.com/scriptex/react-accordion-ts.svg?branch=master)](https://travis-ci.com/scriptex/react-accordion-ts)
-[![npm](https://img.shields.io/npm/dt/react-accordion-ts.svg)](https://www.npmjs.com/package/react-accordion-ts)
-[![npm](https://img.shields.io/npm/v/react-accordion-ts.svg)](https://www.npmjs.com/package/react-accordion-ts)
-[![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/react-accordion-ts/README.md)](https://github.com/scriptex/react-accordion-ts/)
+[![Travis CI](https://travis-ci.com/scriptex/react-accordion-ts.svg?branch=master)](https://travis-ci.com/scriptex/react-accordion-ts)
+[![Github Build](https://github.com/scriptex/react-accordion-ts/workflows/Build/badge.svg)](https://github.com/scriptex/react-accordion-ts/actions?query=workflow%3ABuild)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/34d3d75710534dc6a38c3584a1dcd068)](https://www.codacy.com/gh/scriptex/react-accordion-ts/dashboard?utm_source=github.com&utm_medium=referral&utm_content=scriptex/react-accordion-ts&utm_campaign=Badge_Grade)
+[![Codebeat Badge](https://codebeat.co/badges/d765a4c8-2c0e-44f2-89c3-fa364fdc14e6)](https://codebeat.co/projects/github-com-scriptex-react-accordion-ts-master)
+[![CodeFactor Badge](https://www.codefactor.io/repository/github/scriptex/react-accordion-ts/badge)](https://www.codefactor.io/repository/github/scriptex/react-accordion-ts)
+[![DeepScan grade](https://deepscan.io/api/teams/3574/projects/5257/branches/40799/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3574&pid=5257&bid=40799)
+[![Analytics](https://ga-beacon-361907.ew.r.appspot.com/UA-83446952-1/github.com/scriptex/react-accordion-ts/README.md?pixel)](https://github.com/scriptex/react-accordion-ts/)
 
 # React Accordion
 
 > An accordion widget for React web applications written in Typescript.
+
+## Visitor stats
+
+![GitHub stars](https://img.shields.io/github/stars/scriptex/react-accordion-ts?style=social)
+![GitHub forks](https://img.shields.io/github/forks/scriptex/react-accordion-ts?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/scriptex/react-accordion-ts?style=social)
+![GitHub followers](https://img.shields.io/github/followers/scriptex?style=social)
+
+## Code stats
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/scriptex/react-accordion-ts)
+![GitHub repo size](https://img.shields.io/github/repo-size/scriptex/react-accordion-ts?style=plastic)
+![GitHub language count](https://img.shields.io/github/languages/count/scriptex/react-accordion-ts?style=plastic)
+![GitHub top language](https://img.shields.io/github/languages/top/scriptex/react-accordion-ts?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/scriptex/react-accordion-ts?style=plastic)
 
 ## About
 
@@ -197,7 +212,6 @@ Support and sponsor my work:
 <a href="https://liberapay.com/scriptex/donate" title="Donate on Liberapay">
 	<img src="https://img.shields.io/liberapay/receives/scriptex?label=Donate%20on%20Liberapay&logo=liberapay" />
 </a>
-
 <a href="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/scriptex/scriptex/master/badges/bitcoin.json" title="Donate Bitcoin">
 	<img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/scriptex/scriptex/master/badges/bitcoin.json" />
 </a>
@@ -208,4 +222,3 @@ Support and sponsor my work:
 	<img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/scriptex/scriptex/master/badges/shiba-inu.json" />
 </a>
 </div>
-
