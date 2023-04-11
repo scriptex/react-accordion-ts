@@ -33,7 +33,7 @@
 		"build": "yarn clear && tsc --build tsconfig.json",
 		"test": "jest",
 		"lint": "eslint 'src/**/*.{ts,tsx}' 'demo/**/*.{ts,tsx}' '__tests__/**/*.{ts,tsx}'",
-		"deduplicate": "yarn-deduplicate --packages @types/react yarn.lock",
+		"deduplicate": "yarn-deduplicate",
 		"prod": "yarn deduplicate && yarn lint && yarn build && yarn test"
 	},
 	"dependencies": {},
@@ -63,6 +63,9 @@
 	"peerDependencies": {
 		"react": "^16.9.0 || ^17 || ^18",
 		"react-dom": "^16.9.0 || ^17 || ^18"
+	},
+	"resolutions": {
+		"@types/react": "18.0.34"
 	},
 	"jest": {
 		"moduleFileExtensions": [
