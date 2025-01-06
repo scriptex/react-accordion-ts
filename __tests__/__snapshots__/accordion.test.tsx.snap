@@ -1,110 +1,97 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Accordion should render properly with items 1`] = `
-<div
-  className="accordion"
-  role="tablist"
->
+<DocumentFragment>
   <div
-    aria-expanded={false}
-    className="panel"
-    role="tabpanel"
+    class="accordion"
+    role="tablist"
   >
-    <button
-      className="panel__head"
-      onClick={[Function]}
-      role="tab"
-    >
-      <h2>
-        12-10-2018 - Lorem ipsum
-      </h2>
-    </button>
     <div
-      aria-hidden={true}
-      className="panel__body"
-      style={
-        {
-          "height": "0px",
-        }
-      }
+      aria-expanded="false"
+      class="panel"
+      role="tabpanel"
     >
-      <div
-        className="panel__content"
+      <button
+        class="panel__head"
+        role="tab"
       >
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sint voluptatum sed suscipit fugit tempore quidem aliquid doloremque quibusdam ea.
-        </p>
+        <h2>
+          12-10-2018 - Lorem ipsum
+        </h2>
+      </button>
+      <div
+        aria-hidden="true"
+        class="panel__body"
+        style="height: 0px;"
+      >
+        <div
+          class="panel__content"
+        >
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sint voluptatum sed suscipit fugit tempore quidem aliquid doloremque quibusdam ea.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-expanded="true"
+      class="panel"
+      role="tabpanel"
+    >
+      <button
+        class="panel__head"
+        role="tab"
+      >
+        <h2>
+          13-10-2018 - Dolor sit amet
+        </h2>
+      </button>
+      <div
+        aria-hidden="false"
+        class="panel__body"
+        style="height: 0px;"
+      >
+        <div
+          class="panel__content"
+        >
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sint voluptatum sed suscipit fugit tempore quidem aliquid doloremque quibusdam ea.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sint voluptatum sed suscipit fugit tempore quidem aliquid doloremque quibusdam ea.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-expanded="true"
+      class="panel"
+      role="tabpanel"
+    >
+      <button
+        class="panel__head"
+        role="tab"
+      >
+        <h2>
+          13-10-2018 - Consectetur adipisicing
+        </h2>
+      </button>
+      <div
+        aria-hidden="false"
+        class="panel__body"
+        style="height: 0px;"
+      >
+        <div
+          class="panel__content"
+        >
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sint voluptatum sed suscipit fugit tempore quidem aliquid doloremque quibusdam ea.
+          </p>
+        </div>
       </div>
     </div>
   </div>
-  <div
-    aria-expanded={true}
-    className="panel"
-    role="tabpanel"
-  >
-    <button
-      className="panel__head"
-      onClick={[Function]}
-      role="tab"
-    >
-      <h2>
-        13-10-2018 - Dolor sit amet
-      </h2>
-    </button>
-    <div
-      aria-hidden={false}
-      className="panel__body"
-      style={
-        {
-          "height": "0px",
-        }
-      }
-    >
-      <div
-        className="panel__content"
-      >
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sint voluptatum sed suscipit fugit tempore quidem aliquid doloremque quibusdam ea.
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sint voluptatum sed suscipit fugit tempore quidem aliquid doloremque quibusdam ea.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div
-    aria-expanded={true}
-    className="panel"
-    role="tabpanel"
-  >
-    <button
-      className="panel__head"
-      onClick={[Function]}
-      role="tab"
-    >
-      <h2>
-        13-10-2018 - Consectetur adipisicing
-      </h2>
-    </button>
-    <div
-      aria-hidden={false}
-      className="panel__body"
-      style={
-        {
-          "height": "0px",
-        }
-      }
-    >
-      <div
-        className="panel__content"
-      >
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sint voluptatum sed suscipit fugit tempore quidem aliquid doloremque quibusdam ea.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+</DocumentFragment>
 `;
 
-exports[`Accordion should render properly without items 1`] = `null`;
+exports[`Accordion should render properly without items 1`] = `<DocumentFragment />`;
