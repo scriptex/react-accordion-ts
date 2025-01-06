@@ -1,19 +1,23 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import * as React from 'react';
-import * as renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 
 import { items } from '../demo/mocks';
 import { Accordion } from '../src/accordion';
 
 describe('Accordion', () => {
 	it('should render properly with items', () => {
-		const tree = renderer.create(<Accordion items={items} duration={300} multiple />).toJSON();
+		const { asFragment } = render(<Accordion items={items} duration={300} multiple />);
 
-		expect(tree).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it('should render properly without items', () => {
-		const tree = renderer.create(<Accordion items={[]} duration={0} multiple={false} />).toJSON();
+		const { asFragment } = render(<Accordion items={[]} duration={0} multiple={false} />);
 
-		expect(tree).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 });
