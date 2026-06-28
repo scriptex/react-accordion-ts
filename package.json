@@ -54,7 +54,7 @@
 		"globals": "17.7.0",
 		"jest": "30.4.2",
 		"jest-environment-jsdom": "30.4.1",
-		"postcss": "8.5.15",
+		"postcss": "8.5.16",
 		"react": "19.2.7",
 		"react-dom": "19.2.7",
 		"ts-jest": "29.4.11",
